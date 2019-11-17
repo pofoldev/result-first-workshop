@@ -4,6 +4,14 @@ module.exports = {
     description: `포폴 데브 워크샵에서 사용하는 기본 프로젝트 입니다.`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`
-  ],
+    `gatsby-plugin-react-helmet`,
+    {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+            defaultLayouts: {
+                default: require.resolve('./src/layouts/works.js')
+            }
+        }
+    }
+  ]
 }
